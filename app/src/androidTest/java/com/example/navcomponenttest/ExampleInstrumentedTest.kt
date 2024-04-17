@@ -37,7 +37,7 @@ class ExampleInstrumentedTest {
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun test() = runTest {
-        advanceTimeBy(10000)
+        testDispatcher.scheduler.advanceTimeBy(10000)
         while (true) {
             delay(1000)
         }
