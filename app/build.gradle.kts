@@ -67,5 +67,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation(libs.nav)
+    implementation(libs.nav.core)
+    androidTestImplementation(libs.nav.testing)
 }

@@ -2,6 +2,9 @@ package com.example.navcomponenttest
 
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.test.runTest
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -19,7 +22,9 @@ class ExampleInstrumentedTest {
 
 
     @Test
-    fun test() {
-        Thread.sleep(45000)
+    fun test() = runTest {
+        while(true) {
+            delay(1000)
+        }
     }
 }
